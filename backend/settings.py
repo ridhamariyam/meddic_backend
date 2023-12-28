@@ -48,7 +48,7 @@ AUTH_USER_MODEL = 'medcoapp.account'
    
 # ]
 
-CORS_ALLOWED_ORIGINS = True
+CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
 CORS_ALLOW_METHODS = [
     "GET",
