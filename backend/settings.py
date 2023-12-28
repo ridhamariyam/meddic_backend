@@ -46,7 +46,7 @@ AUTH_USER_MODEL = 'medcoapp.account'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    # "https://medco-frontend-k7t9.vercel.app/",# The domain of your frontend application
+    "https://medco-frontend-k7t9.vercel.app/",# The domain of your frontend application
 ]
 # CORS_ALLOWED_ORIGINS = True
 
