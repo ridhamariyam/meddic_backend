@@ -17,9 +17,9 @@ from decouple import config
 import dj_database_url
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -29,8 +29,17 @@ SECRET_KEY = 'django-insecure-v7)wkm(v^fe0ud=latyass!8yr5!5-u^f7@&v5hq!j90tmb!8$
 
 DEBUG = config('DEBUG', cast=bool, default=True)    
 
-ALLOWED_HOSTS = ['*']
+APPENGINE_URL = config('APPENGINE_URL', default=None)
+if APPENGINE_URL:
+    # ensure a scheme is present in the URL before it's processed.
+    if not urlparse(APPENGINE_URL).scheme:
+        APPENGINE_URL = f'https://{APPENGINE_URL}'
 
+    ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
+    CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
+    SECURE_SSL_REDIRECT = True
+else:
+    ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'medcoapp.account'
 
@@ -186,7 +195,9 @@ from decouple import config
 # stripe payment
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
 
 EMAIL_HOST_USER='ridhamariyam44@gmail.com'
 EMAIL_HOST_PASSWORD='pirofhafhuyspibm'
