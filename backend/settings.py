@@ -29,24 +29,25 @@ SECRET_KEY = 'django-insecure-v7)wkm(v^fe0ud=latyass!8yr5!5-u^f7@&v5hq!j90tmb!8$
 
 DEBUG = config('DEBUG', cast=bool, default=True)    
 
-APPENGINE_URL = config('APPENGINE_URL', default=None)
-if APPENGINE_URL:
-    # ensure a scheme is present in the URL before it's processed.
-    if not urlparse(APPENGINE_URL).scheme:
-        APPENGINE_URL = f'https://{APPENGINE_URL}'
+# APPENGINE_URL = config('APPENGINE_URL', default=None)
+# if APPENGINE_URL:
+#     # ensure a scheme is present in the URL before it's processed.
+#     if not urlparse(APPENGINE_URL).scheme:
+#         APPENGINE_URL = f'https://{APPENGINE_URL}'
 
-    ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
-    CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
-    SECURE_SSL_REDIRECT = True
-else:
-    ALLOWED_HOSTS = ['*']
+#     ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
+#     CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
+#     SECURE_SSL_REDIRECT = True
+# else:
+#     ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'medcoapp.account'
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    "https://medco-frontend-k7t9.vercel.app/",# The domain of your frontend application
+    # 'http://localhost:3000',
+    # "https://medco-frontend-k7t9.vercel.app/",
+    '*'
 ]
 # CORS_ALLOWED_ORIGINS = True
 
