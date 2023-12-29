@@ -41,10 +41,11 @@ DEBUG = config('DEBUG', cast=bool, default=True)
 # else:
 #     ALLOWED_HOSTS = ['*']
 
+ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'medcoapp.account'
 
 CORS_ALLOWED_ORIGINS = [
-  "https://medco-frontend.vercel.app","https://localhost:3000"
+  "https://medco-frontend.vercel.app","https://localhost:3000",
    
 ]
 
