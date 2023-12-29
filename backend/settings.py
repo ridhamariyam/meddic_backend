@@ -44,24 +44,24 @@ DEBUG = config('DEBUG', cast=bool, default=True)
 ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'medcoapp.account'
 
-CORS_ALLOWED_ORIGINS = [
-"https://medco-frontend.vercel.app/",
+# CORS_ALLOWED_ORIGINS = [
+# "https://medco-frontend.vercel.app/",
    
-]
+# ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
-
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "OPTIONS",
-    "DELETE",
-    "PUT",
-    "PATCH",   # Add any other methods you need
-]
+
+
+# CORS_ALLOW_METHODS = [
+#     "GET",
+#     "POST",
+#     "OPTIONS",
+#     "DELETE",
+#     "PUT",
+#     "PATCH",   # Add any other methods you need
+# ]
 
 
 # Application definition
