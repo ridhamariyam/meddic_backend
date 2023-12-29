@@ -22,13 +22,13 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
         
-class LoginSerializer(serializers.ModelSerializer):
+class LoginSerializer(serializers.Serializer):
     email =serializers.EmailField()
     password = serializers.CharField()
     
-    class Meta:
-        model = account
-        fields = '__all__'
+    # class Meta:
+    #     model = account
+    #     fields = '__all__'
 
 class VarifyAccountSerializer(serializers.Serializer):
     email = serializers.EmailField()

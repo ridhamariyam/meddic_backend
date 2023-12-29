@@ -18,7 +18,7 @@ def sent_email_via_otp(sender, instance, created, **kwargs):
         otp = random.randint(1000, 9999)
         message = f'Your otp is {otp}'
         email_from = settings.EMAIL_HOST_USER
-        send_mail(subject, message, email_from, [instance.email])
+        send_mail(subject, message, email_from, [instance.email], fail_silently=True)
         user = account.objects.get(email = instance.email)
         user_otp = OTP.objects.create(user = user, otp = otp)
         user_otp.save()

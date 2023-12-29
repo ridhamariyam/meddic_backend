@@ -81,9 +81,10 @@ class LoginApiView(APIView):
 
             
 class Register(generics.ListCreateAPIView):
+    print('hiii from register')
     queryset=account.objects.all()
     serializer_class = UserSerializer
-    parser_classes = (MultiPartParser, FormParser)
+    # parser_classes = (MultiPartParser, FormParser)
    
 
 class VarifyOTP(APIView):

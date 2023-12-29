@@ -44,24 +44,24 @@ DEBUG = config('DEBUG', cast=bool, default=True)
 ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'medcoapp.account'
 
-CORS_ALLOWED_ORIGINS = [
-  "https://medco-frontend.vercel.app","https://localhost:3000",
+# CORS_ALLOWED_ORIGINS = [
+# "https://localhost:3000",
    
-]
+# ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 
 
 
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "OPTIONS",
-    "DELETE",
-    "PUT",
-    "PATCH",   # Add any other methods you need
-]
+# CORS_ALLOW_METHODS = [
+#     "GET",
+#     "POST",
+#     "OPTIONS",
+#     "DELETE",
+#     "PUT",
+#     "PATCH",   # Add any other methods you need
+# ]
 
 
 # Application definition
@@ -206,6 +206,8 @@ from decouple import config
 EMAIL_HOST_USER='ridhamariyam44@gmail.com'
 EMAIL_HOST_PASSWORD='pirofhafhuyspibm'
 EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  
+EMAIL_USE_TLS = True
 
 SECRET_KEY='django-insecure-v7)wkm(v^fe0ud=latyass!8yr5!5-u^f7@&v5hq!j90tmb!8$'
 
