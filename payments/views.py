@@ -37,8 +37,8 @@ def test_payment(request):
                 },
             ],
             mode='payment',
-            success_url=f"http://localhost:3000/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
-            cancel_url='http://localhost:3000/BookDoctor/')
+            success_url=f"https://meddic.website/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
+            cancel_url='https://meddic.website/BookDoctor/')
     
     return Response(status=status.HTTP_200_OK,data={'url':session.url})
 
