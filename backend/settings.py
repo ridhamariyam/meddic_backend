@@ -43,8 +43,10 @@ DEBUG = config('DEBUG', cast=bool, default=True)
 
 AUTH_USER_MODEL = 'medcoapp.account'
 
-
-CORS_ALLOW_HEADERS = "access-control-allow-origin"
+CORS_ALLOWED_ORIGINS = [
+  "https://medco-frontend.vercel.app","https://localhost:3000"
+   
+]
 
 
 
