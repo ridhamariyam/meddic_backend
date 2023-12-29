@@ -20,6 +20,7 @@ class account(AbstractUser):
     role = models.CharField(max_length=30, default='user', choices=ROLE_CHOICES, verbose_name='Role')
     profile_image = models.ImageField(upload_to='profile_image', null=True, blank=True)
     date_joined = models.DateField(auto_now_add=True)
+    username = models.CharField(max_length=150, unique=False)
     
 
     USERNAME_FIELD = 'email'
