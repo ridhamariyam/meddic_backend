@@ -37,11 +37,11 @@ def test_payment(request):
                 },
             ],
             mode='payment',
-            # success_url=f"http://localhost:3000/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
-            # cancel_url='http://localhost:3000/BookDoctor/')
+            success_url=f"http://localhost:3000/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
+            cancel_url='http://localhost:3000/BookDoctor/')
             
-            success_url=f"https://medco-frontend.vercel.app/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
-            cancel_url='https://medco-frontend.vercel.app/BookDoctor/')
+            # success_url=f"https://medco-frontend.vercel.app/BookDoctor/{id}?is_success=true&&mode={mode}&&date={date}&&time={time}&&doctor={doctor}",
+            # cancel_url='https://medco-frontend.vercel.app/BookDoctor/')
     
     return Response(status=status.HTTP_200_OK,data={'url':session.url})
 
