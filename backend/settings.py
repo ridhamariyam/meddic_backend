@@ -211,8 +211,12 @@ EMAIL_USE_TLS = True
 
 SECRET_KEY='django-insecure-v7)wkm(v^fe0ud=latyass!8yr5!5-u^f7@&v5hq!j90tmb!8$'
 
-STRIPE_API_KEY='sk_test_51OLRLZSAQZuiVDoMhavLvkLUmG9HPZfwQ0ghZRrH8B8UVhrnJi0v5jMoaU6Ke6p7wU9vBMfpAGJgtUGI1LgD1rzq00w9L46mKR'
+# STRIPE_API_KEY='sk_test_51OLRLZSAQZuiVDoMhavLvkLUmG9HPZfwQ0ghZRrH8B8UVhrnJi0v5jMoaU6Ke6p7wU9vBMfpAGJgtUGI1LgD1rzq00w9L46mKR'
 
+import stripe
+
+# Set the Stripe API key
+stripe.api_key = 'sk_test_51OLRLZSAQZuiVDoMhavLvkLUmG9HPZfwQ0ghZRrH8B8UVhrnJi0v5jMoaU6Ke6p7wU9vBMfpAGJgtUGI1LgD1rzq00w9L46mKR'
 
 
 AUTH_USER_MODEL = 'medcoapp.account'
