@@ -16,6 +16,10 @@ import stripe
 from decouple import config
 import dj_database_url
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 
 
@@ -86,6 +90,10 @@ INSTALLED_APPS = [
     'channels',
     'django_rest_passwordreset',
     'payments',
+    
+
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -233,3 +241,11 @@ DATABASES = {
     }
 }
 
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'de07hisqn',
+    'API_KEY': '936144464435977',
+    'API_SECRET': 'J7vV7tfHKf4WwH-3VU-aB9_coko',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
