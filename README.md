@@ -6,7 +6,8 @@ Project Overview
 MedCo aims to revolutionize healthcare access by providing a comprehensive platform for users to connect with doctors virtually. The application ensures a secure and user-friendly experience, incorporating features such as real-time chat, secure payment processing using Stripe, and efficient appointment booking.
 
 Live Link: https://medco-frontend.vercel.app/
-Key Features
+
+### Key Features
 
     Strong User Authentication: Register, log in, and manage user profiles securely.
     Doctor Directory with Video Consultation: Utilizes ZegoCloud for video consultations with extensive doctor listings.
@@ -14,7 +15,7 @@ Key Features
     Secure Payment Gateway: Smooth transactions ensured with Stripe integration.
     Effortless Appointment Booking: Streamlined process for scheduling medical appointments.
 
-Technologies Used
+### Technologies Used
 
     Django (Backend): High-level Python web framework for rapid development and clean, pragmatic design.
     React (Frontend): A JavaScript library for building user interfaces.
@@ -24,9 +25,9 @@ Technologies Used
     Hosting: Vercel for Frontend and AWS EC2 for Backend.
     Version Control: Git for tracking changes in the codebase.
 
-View GitHub Repositories for Front end Code
+### View GitHub Repositories for Front end Code
 
-    https://github.com/ridhamariyam/Meddic_frontend
+https://github.com/ridhamariyam/Meddic_frontend
 
 Skills
 
