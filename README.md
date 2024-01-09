@@ -1,4 +1,4 @@
-MedCo - Empowering Healthcare Access
+### MedCo - Empowering Healthcare Access
 
 MedCo is an advanced healthcare web application developed using Django for the backend and React for the frontend. This platform facilitates seamless connections between users and doctors, offering video consultations, digital prescriptions, and appointment scheduling.
 Project Overview
