@@ -29,17 +29,17 @@ Live Link: https://medco-frontend.vercel.app/
 
 https://github.com/ridhamariyam/Meddic_frontend
 
-Skills
+###  Skills
 
-    Python (Programming Language)
-    Django
-    React.js
-    PostgreSQL
-    Payment Gateways
-    Application Programming Interfaces (API)
-    Object-Relational Mapping (ORM)
-    Amazon EC2
-    Git
+    - Python (Programming Language)
+    - Django
+    - React.js
+    - PostgreSQL
+    - Payment Gateways
+    - Application Programming Interfaces (API)
+    - Object-Relational Mapping (ORM)
+    - Amazon EC2
+    - Git
     
 
 This project showcases my expertise in developing a sophisticated healthcare application, emphasizing secure communication, efficient backend management, and a seamless user experience. If you have any questions or suggestions, feel free to reach out me at ridhamariyam44@gmail.com
